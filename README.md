@@ -19,19 +19,29 @@ This project evaluates functional consequences using ground-truth experimental l
 
 ---
 
-## 🚀 Key Modules
+## 🚀 Key Modules & Interactive Demos
 
 ### 1. Clinical Evaluation Dashboard (`brca_real_data.py`)
 * Benchmarks 3 distinct classifiers on **9,200+ BRCA1/2 functional variants**.
 * Computes clinical-grade metrics: Confusion Matrix, ROC-AUC curves, and prediction confidence intervals.
-* Features a 6-panel real-time Matplotlib dashboard tracking convergence, loss curves, and individual variant predictions.
+* Features a 6-panel real-time dashboard tracking convergence, loss curves, and individual held-out variant predictions.
+
+<p align="center">
+  <img src="assets/dashboard_demo.gif" alt="Clinical Benchmark Dashboard Demo" width="92%">
+</p>
+
+---
 
 ### 2. Neural Network from Scratch (`brca_training_visual.py`)
-* Implements mathematical fundamentals from the ground up: Forward propagation, multi-class Cross-Entropy Loss, and Backpropagation using **pure NumPy**.
+* Implements mathematical fundamentals from the ground up: Vectorized Forward Propagation, Multi-class Cross-Entropy Loss, and Backpropagation with SGD using **pure NumPy**.
 * Custom real-time dynamic visualization showing:
   * Excitatory vs. inhibitory synaptic weight adjustments (neon glow effects).
   * Neuron-level activation maps for specific patient mutations.
   * Live accuracy and loss minimization trajectories.
+
+<p align="center">
+  <img src="assets/neural_net_demo.gif" alt="Neural Network From Scratch Animation" width="92%">
+</p>
 
 ---
 
@@ -53,7 +63,7 @@ The dataset used in this repository originates from the open-source **BRCA-ML** 
 * **Source Repository:** [Steven-N-Hart/BRCA-ML](https://github.com/Steven-N-Hart/BRCA-ML)
 * **Raw CSV Directory:** [BRCA-ML/results](https://github.com/Steven-N-Hart/BRCA-ML/tree/master/results)
 
-To run the project locally, place the 10-fold cross-validation CSV files (`BRCA1_res.fold*.csv` and `BRCA2_res.fold*.csv`) inside a `data/` directory at the project root.
+All 10-fold cross-validation CSV files for *BRCA1* and *BRCA2* are included inside the `data/` directory for immediate, out-of-the-box reproduction.
 
 ---
 
@@ -61,7 +71,7 @@ To run the project locally, place the 10-fold cross-validation CSV files (`BRCA1
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/<YOUR-USERNAME>/DeepBRCA-Variant-Classification.git
+git clone https://github.com/msadranajafi-md/DeepBRCA-Variant-Classification.git
 cd DeepBRCA-Variant-Classification
 
 # 2. Install dependencies
